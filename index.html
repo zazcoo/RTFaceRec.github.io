@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Face Recognition Security System </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  position: relative; /* Ensure the pseudo-element positions correctly */
+  background-position: center;
+  background-size: cover;
+  background-image: url("/images/backgroundFace.jpg");
+  min-height: 100%;
+}
+
+.bgimg-1::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity to make it darker or lighter */
+  pointer-events: none; /* Allows clicks to pass through to underlying elements */
+}
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Face Recognition Security System</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> FUTURE WORK</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">FUTURE WORK</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white" style="text-align:center; padding:48px">
+    <h1 class="w3-jumbo w3-hide-small">Real Time Face Recognition Security System on Embedded Platform</h1>
+    <div class="w3-margin-top w3-large">
+      <a href="https://github.com/ronnyismael1/face-recognition/tree/speed" target="_blank">
+        <i class="fa-brands fa-github" style="font-size: 48px;"></i>
+      </a>
+    </div>
+    <h2 class="w3-large w3-padding-top-64">Ronny Ismael, Cary Zheng, Michael Zabaneh, Mohammad Zaza</h2>
+        <h2 class="w3-large w3-padding-top-24">Prof. Jun Liu, Project Advisor</h2>
+
+    <p>
+      <a href="#about" class="w3-button w3-white w3-padding-large w3-margin-top">Learn more</a>
+    </p>
+  </div>
+</header>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center w3-xxxlarge" style="color: darkgoldenrod;">ABOUT THE PROJECT</h3>
+  <p class=" w3-center" style="font-size: 22px;">This project aims to provide a secure way of locking your most valuable possessions by utilizing facial recognition technology. Smart home applications and IoT devices are growing in demand everywhere, and the market continues to see the success of technologies like Ring and Alexa. While these devices aim to provide security through surveillance, our product innovates the the most basic component, the lock, and turns it into a technology to control the point of access. The facial recognition technology integrated into this provides both convenience and security for the user.</p>
+
+  <p class="w3-padding-top-64 w3-xxlarge w3-center" style="color: darkgoldenrod;">Tools Used</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+  <div class="w3-third">
+    <i class="fa fa-microchip w3-margin-bottom w3-jumbo w3-center"></i>
+    <p class="w3-large">Hardware</p>
+    <p>Raspberry Pi 4, Door Lock Solenoid, External Camera, ARTY S-7 FPGA, 5V Relay, 12V 2A DC Power Supply, DC to DC Step-down Converter</p>
+  </div>
+  <div class="w3-third">
+    <i class="fa fa-code w3-margin-bottom w3-jumbo"></i>
+    <p class="w3-large">Development Tools</p>
+    <p>Visual Studio Code, MobaXTerm, Vivado 2023.1, GitHub</p>
+  </div>
+
+
+  <div class="w3-third">
+    <i class="fa-brands fa-python w3-margin-bottom w3-jumbo"></i>
+    <p class="w3-large">Python Libraries</p>
+    <p>face_recognition_models, OpenCV, Click>=6.0, dlib>=19.3.0, numpy, Pillow, scipy>=0.17.0</p>
+  </div>
+
+</div>
+
+
+<p class="w3-padding-top-64 w3-xxlarge w3-center" style="color: darkgoldenrod;">Python Scripts</p>
+    <p class="w3-large w3-center">The recognize_faces.py script is structured to train a face recognition algorithm to recognize specific individuals by loading sample images, extracting face encodings, and then comparing these encodings against faces found in our known faces database to identify them. The script defines a function that takes an image as input, detects faces within it, and attempts to recognize these faces based on the known face encodings. This process involves loading and encoding sample images for known individuals and then using these encodings to identify matches in the input image.</p>
+    <p class="w3-large w3-center">The camera_module.py script is responsible for capturing frames from the camera, processing them to detect and identify faces using the recognize_faces functions imported from recognize_faces.py, and then displaying the video feed with boxes and names drawn around recognized faces. The script uses OpenCV for video capture and processing, including resizing frames for faster processing.</p>
+    <p class="w3-large w3-center">The lock_module.py script enables a Raspberry Pi to control a door lock using GPIO pins and threading for asynchronous operation. It initializes the lock mechanism and manages locking/unlocking actions based on person detection. The unlock_door function unlocks the door if a specified person is detected, with a cooldown period to prevent frequent unlocking. A threading.Timer is used to re-lock the door automatically after a short period. This setup allows for a background thread to handle the lock's state while the main program runs in parallel.</p>
+
+
+
+  <p class="w3-padding-top-64 w3-xxlarge w3-center" style="color: darkgoldenrod;">RASPI <-> FPGA COMMUNICATION</p>
+
+
+<div class="w3-container " >
+
+<div class="w3-row-padding w3-center">
+
+  <div class="w3-col m6">
+    <p class="w3-large w3-center">To speed up the processing of faces, we needed to parallelize the processing by offloading work from RASPI to the FPGA, compute, then return it back to RASPI. We set up a master/slave implementation using the SPI protocol with a custom IP. We serialize the data from the raspi for known_faces encodings and each face_encoding found in the image into a byte stream. Since each encoding is an ndarray of floating-point numbers, we serialized each number into bytes. The face_recognition library produces encodings as 128-dimensional floats, so we send 128 * 8 bytes for each face encoding for a 64-bit floating point. For each face found, we send its encoding to the FPGA and receive the processed result. The FPGA returns a simple byte stream indicating the index of the matching face or if none was recognized.</p>
+  </div>
+  <div class="w3-col m6">
+    <img class="w3-image w3-round-large" src="/images/RA1.jpg" alt="Buildings"  width="700" height="394">
+  </div>
+</div>
+</div>
+
+  <div class="w3-row-padding w3-padding-top-64 w3-center">
+  <div class="w3-col m6">
+    <p class="w3-large w3-center">The FPGA calculates the Euclidean distance between the two given vectors. The distance d between two vectors x and y can be calculated as...</p>
+  </div>
+  <div class="w3-col m6">
+    <img class="w3-image w3-round-large" src="/images/RA2.jpg" alt="Buildings"  width="700" height="394">
+  </div>
+</div>
+
+  <div class="w3-row-padding w3-padding-top-64 w3-center">
+  <div class="w3-col m6">
+    <p class="w3-large w3-center">where n is the number of dimensions of the vectors. The distance will then be compared to a threshold to decide whether the faces match or not. The FPGA will then send the result back to the Raspberry Pi.</p>
+  </div>
+  <div class="w3-col m6">
+    <img class="w3-image w3-round-large" src="/images/RA3.jpg" alt="Buildings"  width="700" height="394">
+  </div>
+</div>
+
+</div>
+
+
+
+
+<p class="w3-padding-top-64 w3-xxlarge w3-center" style="color: darkgoldenrod;">Power Supply</p>
+
+
+<div class="w3-container w3-padding-24" >
+
+<div class="w3-row-padding w3-center">
+
+   <div class="w3-col m6">
+    <img class="w3-image w3-round-large" src="/images/PW1.jpg" alt="Buildings"  width="700" height="394">
+  </div>
+
+  <div class="w3-col m6">
+    <p class="w3-large w3-center">
+  Battery Capacity (Ah): 3Ah (3000mAh) <br>
+  Input Voltage (V): 14.8V <br>
+  Output Voltage (V): 5V <br>
+  Converter Efficiency: 85% (0.85) <br>
+  Pi Consumption (A): 1.5A <br>
+  18650 Lithium-Ion Cells qty. 4 in series, 3.7V nominal voltage each to get 14.8 V, then use step down converter to get reliable 12V and 5V <br>
+  Effective Capacity (Ah) = 3Ah * (14.8V / 5V) * 0.85 <br>
+  Estimated Runtime (hrs) = Effective Capacity (Ah) / Pi Consumption (A) <br>
+  Calculated Estimated Runtime = 5.032 hours
+</p>
+
+  </div>
+
+</div>
+</div>
+
+
+
+
+<!-- Promo Section - "We know design" -->
+<div class=" w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 class="w3-xxlarge w3-center">We know design.</h3>
+
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="/images/Proto1.jpg" alt="Buildings" width="700" height="394">
+            <img class="w3-padding-16 w3-image w3-round-large " src="/images/Proto2.jpg" alt="Buildings" width="700" height="394">
+
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">The ones who are behind this project</p>
+  <div class="w3-row-padding w3-grayscale-min" style="margin-top:64px; display: flex; flex-wrap: wrap; justify-content: space-around;">
+
+    <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
+      <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
+        <img src="/images/team1.jpg" alt="Ronny N. Ismael" style="width:100%; height: 600px; object-fit: cover;">
+        <div class="w3-container" style="flex: 1;">
+          <h3>Ronny N. Ismael</h3>
+          <p class="w3-opacity">B.S. Computer Engineer</p>
+          <p>Class of 2024</p>
+          <p><a href="https://www.linkedin.com/in/ronnyismael" class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin"></i></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
+      <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
+        <img src="/images/team2.jpg" alt="Cary Zheng" style="width:100%; height: 600px; object-fit: cover;">
+        <div class="w3-container" style="flex: 1;">
+          <h3>Cary Zheng</h3>
+          <p class="w3-opacity">B.S. Computer Engineer</p>
+          <p>Class of 2024</p>
+          <p><a href="https://www.linkedin.com/in/cary-zheng/" class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin"></i></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
+      <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
+        <img src="/images/team3.jpg" alt="Michael Zabaneh" style="width:100%; height: 600px; object-fit: cover;">
+        <div class="w3-container" style="flex: 1;">
+          <h3>Michael Zabaneh</h3>
+          <p class="w3-opacity">B.S. Computer Engineer</p>
+          <p>Class of 2024</p>
+          <p><a href="https://www.linkedin.com/in/michaelzabaneh/" class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin"></i></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
+      <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
+        <img src="/images/team4.jpg" alt="Mohammad Zaza" style="width:100%; height: 600px; object-fit: cover;">
+        <div class="w3-container" style="flex: 1;">
+          <h3>Mohammad Zaza</h3>
+          <p class="w3-opacity">B.S. Software Engineer</p>
+          <p>Class of 2024</p>
+          <p><a href="https://www.linkedin.com/in/mhzaza/" class="w3-button w3-light-grey w3-block"><i class="fa fa-linkedin"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">FUTURE WORK</h3>
+  <p class="w3-center w3-large">What we are currently working on</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <p class="w3-center w3-xlarge">Further processing optimization</p>
+    </div>
+    <div class="w3-col l3 m6">
+      <p class="w3-center w3-xlarge">Offload more functions from RASPI to FPGA</p>
+    </div>
+    <div class="w3-col l3 m6">
+      <p class="w3-center w3-xlarge">Convert functions to C++</p>
+    </div>
+    <div class="w3-col l3 m6">
+      <p class="w3-center w3-xlarge">Improve streaming and UI</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+      <div class="w3-margin-top w3-large w3-center">
+      <a href="https://github.com/ronnyismael1/face-recognition/tree/speed" target="_blank">
+        <i class="fa-brands fa-github" style="font-size: 48px;"></i>
+      </a>
+    </div>
+        <h3 class="w3-center w3-padding-top-64"><a class="w3-button  w3-blue-gray" href="mailto:mohammad.zaza@sjsu.edu">Contact Us</a></h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us an email!</p>
+  <p class="w3-center"><i class="fa fa-map-marker "></i> San Jose, CA</p>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
